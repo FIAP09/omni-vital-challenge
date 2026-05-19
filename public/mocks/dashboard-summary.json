@@ -1,0 +1,7 @@
+{
+  "patients_pre_op": 8,
+  "patients_post_op": 15,
+  "surgeries_scheduled": 3,
+  "weight_regain_alerts": 2,
+  "pending_exams": 5
+}

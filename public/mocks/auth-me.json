@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "name": "Dr. Hugo Lima",
+  "email": "hugo@hospital.com",
+  "role": "medico",
+  "hospital_id": 1,
+  "is_active": true
+}

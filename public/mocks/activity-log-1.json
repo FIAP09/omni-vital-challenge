@@ -1,0 +1,9 @@
+[
+  { "id": "act-001", "date": "2026-05-03", "type": "Caminhada leve", "duration_min": 30, "notes": "Caminhada no condomínio, ritmo leve." },
+  { "id": "act-002", "date": "2026-05-04", "type": "Pilates", "duration_min": 45, "notes": "Aula com foco em fortalecimento abdominal e postural." },
+  { "id": "act-003", "date": "2026-05-05", "type": "Caminhada leve", "duration_min": 35 },
+  { "id": "act-004", "date": "2026-05-06", "type": "Descanso", "duration_min": 0, "notes": "Dia de descanso ativo – alongamentos leves." },
+  { "id": "act-005", "date": "2026-05-07", "type": "Hidroginástica", "duration_min": 40, "notes": "Primeira aula. Boa tolerância." },
+  { "id": "act-006", "date": "2026-05-08", "type": "Caminhada leve", "duration_min": 40, "notes": "Aumentou o tempo em relação às caminhadas anteriores." },
+  { "id": "act-007", "date": "2026-05-09", "type": "Pilates", "duration_min": 45 }
+]

@@ -1,0 +1,153 @@
+[
+  {
+    "id": "ex-001",
+    "name": "Eletrocardiograma",
+    "specialty": "cardiologia",
+    "date": "2025-10-15",
+    "status": "realizado",
+    "notes": "Ritmo sinusal, sem alterações significativas.",
+    "evaluator": "Dr. Ricardo Mendes"
+  },
+  {
+    "id": "ex-002",
+    "name": "Ecocardiograma transtorácico",
+    "specialty": "cardiologia",
+    "date": "2025-10-18",
+    "status": "realizado",
+    "notes": "FE 62%. Câmaras com dimensões normais. Sem valvopatias.",
+    "evaluator": "Dr. Ricardo Mendes"
+  },
+  {
+    "id": "ex-003",
+    "name": "Espirometria",
+    "specialty": "pneumologia",
+    "date": "2025-10-22",
+    "status": "realizado",
+    "notes": "CVF 3.8L (86% do previsto). VEF1/CVF 0.81. Sem distúrbio ventilatório.",
+    "evaluator": "Dra. Camila Ferreira"
+  },
+  {
+    "id": "ex-004",
+    "name": "Polissonografia",
+    "specialty": "pneumologia",
+    "date": "2025-10-28",
+    "status": "realizado",
+    "notes": "IAH 18/h – apneia obstrutiva moderada. Indicado CPAP pré-operatório.",
+    "evaluator": "Dra. Camila Ferreira"
+  },
+  {
+    "id": "ex-005",
+    "name": "Avaliação endocrinológica",
+    "specialty": "endocrinologia",
+    "date": "2025-11-05",
+    "status": "realizado",
+    "notes": "Resistência insulínica confirmada. TSH normal. Sem contraindicação endócrina à cirurgia.",
+    "evaluator": "Dra. Letícia Braga"
+  },
+  {
+    "id": "ex-006",
+    "name": "Avaliação nutrológica pré-operatória",
+    "specialty": "nutrologia",
+    "date": "2025-11-08",
+    "status": "realizado",
+    "notes": "IMC 40.2 kg/m². Deficiência de vitamina D. Iniciada suplementação.",
+    "evaluator": "Dr. Felipe Costa"
+  },
+  {
+    "id": "ex-007",
+    "name": "Avaliação psicológica pré-operatória",
+    "specialty": "psicologia",
+    "date": "2025-11-10",
+    "status": "realizado",
+    "notes": "Paciente com motivação adequada, expectativas realistas. Sem transtornos alimentares ativos. Apto para cirurgia.",
+    "evaluator": "Dra. Ana Paula Oliveira"
+  },
+  {
+    "id": "ex-008",
+    "name": "Avaliação nutricional pré-operatória",
+    "specialty": "nutricionista",
+    "date": "2025-11-12",
+    "status": "realizado",
+    "notes": "Dieta hipocalórica de preparo iniciada. Orientações sobre fases da dieta pós-operatória.",
+    "evaluator": "Nutr. Juliana Martins"
+  },
+  {
+    "id": "ex-009",
+    "name": "Retorno nutricional – fase líquida",
+    "specialty": "nutricionista",
+    "date": "2025-12-12",
+    "status": "realizado",
+    "notes": "Boa aceitação da dieta líquida completa. Hidratação adequada. Sem vômitos.",
+    "evaluator": "Nutr. Juliana Martins"
+  },
+  {
+    "id": "ex-010",
+    "name": "Retorno nutrológico 30 dias",
+    "specialty": "nutrologia",
+    "date": "2026-01-05",
+    "status": "realizado",
+    "notes": "Perda de 10 kg no primeiro mês. Suplementação polivitamínica mantida.",
+    "evaluator": "Dr. Felipe Costa"
+  },
+  {
+    "id": "ex-011",
+    "name": "Retorno psicológico 60 dias",
+    "specialty": "psicologia",
+    "date": "2026-02-05",
+    "status": "realizado",
+    "notes": "Adaptação ao novo padrão alimentar em progresso. Paciente relata melhora do humor e autoestima.",
+    "evaluator": "Dra. Ana Paula Oliveira"
+  },
+  {
+    "id": "ex-012",
+    "name": "Retorno endocrinológico 3 meses",
+    "specialty": "endocrinologia",
+    "date": "2026-03-05",
+    "status": "realizado",
+    "notes": "Glicose em jejum normalizada. Metformina suspensa. HbA1c 5.9%. Manter acompanhamento.",
+    "evaluator": "Dra. Letícia Braga"
+  },
+  {
+    "id": "ex-013",
+    "name": "Retorno nutricional – fase branda",
+    "specialty": "nutricionista",
+    "date": "2026-03-15",
+    "status": "realizado",
+    "notes": "Tolerando bem dieta branda. Orientação sobre mastigação e volume das porções.",
+    "evaluator": "Nutr. Juliana Martins"
+  },
+  {
+    "id": "ex-014",
+    "name": "Polissonografia de controle",
+    "specialty": "pneumologia",
+    "date": "2026-04-20",
+    "status": "realizado",
+    "notes": "IAH 6/h – melhora significativa. CPAP suspenso.",
+    "evaluator": "Dra. Camila Ferreira"
+  },
+  {
+    "id": "ex-015",
+    "name": "Retorno cardiológico 6 meses",
+    "specialty": "cardiologia",
+    "date": "2026-05-20",
+    "status": "pendente",
+    "evaluator": "Dr. Ricardo Mendes"
+  },
+  {
+    "id": "ex-016",
+    "name": "Retorno nutrológico 6 meses",
+    "specialty": "nutrologia",
+    "date": "2026-05-25",
+    "status": "pendente",
+    "evaluator": "Dr. Felipe Costa"
+  },
+  {
+    "id": "ex-017",
+    "name": "Densitometria óssea",
+    "specialty": "endocrinologia",
+    "date": "2026-06-10",
+    "status": "pendente",
+    "notes": "Solicitada devido ao PTH discretamente elevado.",
+    "evaluator": "Dra. Letícia Braga"
+  }
+]

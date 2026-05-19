@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "name": "Joao Silva",
+  "birth_date": "1987-03-10",
+  "weight": 95,
+  "height": 1.79,
+  "bmi": 29.6,
+  "risk_level": "medio",
+  "status": "IN_RECOVERY",
+  "initial_weight": 120,
+  "target_weight": 85,
+  "surgery_date": "2026-01-15"
+}
