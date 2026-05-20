@@ -1,0 +1,10 @@
+{
+  "surgery_id": 1,
+  "patient_id": 1,
+  "technique": "sleeve",
+  "duration_minutes": 95,
+  "complications": [],
+  "notes": "Gastrectomia vertical laparoscópica sem intercorrências. Teste de azul de metileno negativo para fístula. Dreno sentinela posicionado. Paciente encaminhado à recuperação em bom estado.",
+  "surgeon": "Dr. Marcos Almeida",
+  "date": "2025-12-01"
+}

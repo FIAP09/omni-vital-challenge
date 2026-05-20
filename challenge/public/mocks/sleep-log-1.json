@@ -1,0 +1,9 @@
+[
+  { "id": "sleep-001", "date": "2026-05-03", "hours": 7.5, "quality": "bom", "notes": "Dormiu sem interrupções." },
+  { "id": "sleep-002", "date": "2026-05-04", "hours": 6.0, "quality": "regular", "notes": "Acordou uma vez durante a noite para ir ao banheiro." },
+  { "id": "sleep-003", "date": "2026-05-05", "hours": 7.0, "quality": "bom" },
+  { "id": "sleep-004", "date": "2026-05-06", "hours": 5.5, "quality": "ruim", "notes": "Dificuldade para dormir, ansiedade relatada." },
+  { "id": "sleep-005", "date": "2026-05-07", "hours": 7.0, "quality": "bom" },
+  { "id": "sleep-006", "date": "2026-05-08", "hours": 6.5, "quality": "regular", "notes": "Dormiu tarde, assistindo TV." },
+  { "id": "sleep-007", "date": "2026-05-09", "hours": 8.0, "quality": "bom", "notes": "Melhor noite da semana." }
+]

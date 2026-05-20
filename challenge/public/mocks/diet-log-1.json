@@ -1,0 +1,22 @@
+[
+  { "id": "diet-001", "date": "2026-05-07", "meal_type": "cafe_manha", "description": "Iogurte natural desnatado com 1 col. sopa de aveia e 5 morangos", "calories": 180 },
+  { "id": "diet-002", "date": "2026-05-07", "meal_type": "lanche_manha", "description": "Queijo cottage (2 col. sopa) com 3 torradas integrais pequenas", "calories": 140 },
+  { "id": "diet-003", "date": "2026-05-07", "meal_type": "almoco", "description": "Frango grelhado desfiado (80g), purê de abóbora (3 col. sopa), abobrinha refogada", "calories": 320 },
+  { "id": "diet-004", "date": "2026-05-07", "meal_type": "lanche_tarde", "description": "Vitamina de banana com leite desnatado e canela (150ml)", "calories": 130 },
+  { "id": "diet-005", "date": "2026-05-07", "meal_type": "jantar", "description": "Omelete de 2 ovos com espinafre e queijo branco, salada de alface", "calories": 260 },
+  { "id": "diet-006", "date": "2026-05-07", "meal_type": "ceia", "description": "Chá de camomila com 2 bolachas de arroz", "calories": 60 },
+
+  { "id": "diet-007", "date": "2026-05-08", "meal_type": "cafe_manha", "description": "Tapioca pequena com ovo mexido e requeijão light", "calories": 210 },
+  { "id": "diet-008", "date": "2026-05-08", "meal_type": "lanche_manha", "description": "1 fatia de mamão papaya com linhaça", "calories": 95 },
+  { "id": "diet-009", "date": "2026-05-08", "meal_type": "almoco", "description": "Peixe assado (tilápia 90g), arroz integral (2 col. sopa), cenoura cozida e brócolis", "calories": 340 },
+  { "id": "diet-010", "date": "2026-05-08", "meal_type": "lanche_tarde", "description": "Iogurte grego light com 1 col. chá de mel", "calories": 120 },
+  { "id": "diet-011", "date": "2026-05-08", "meal_type": "jantar", "description": "Sopa de legumes com frango desfiado (200ml)", "calories": 220 },
+  { "id": "diet-012", "date": "2026-05-08", "meal_type": "ceia", "description": "Leite morno desnatado (100ml) com canela", "calories": 50 },
+
+  { "id": "diet-013", "date": "2026-05-09", "meal_type": "cafe_manha", "description": "Mingau de aveia com leite desnatado (150ml) e 1 col. chá de cacau", "calories": 190 },
+  { "id": "diet-014", "date": "2026-05-09", "meal_type": "lanche_manha", "description": "1 pera pequena picada", "calories": 70 },
+  { "id": "diet-015", "date": "2026-05-09", "meal_type": "almoco", "description": "Carne moída magra (80g), purê de batata doce (3 col. sopa), vagem refogada", "calories": 350 },
+  { "id": "diet-016", "date": "2026-05-09", "meal_type": "lanche_tarde", "description": "Coalhada desnatada com 1 col. sopa de granola sem açúcar", "calories": 130 },
+  { "id": "diet-017", "date": "2026-05-09", "meal_type": "jantar", "description": "Panqueca de frango com massa de aveia (1 unidade), salada de rúcula com tomate", "calories": 280 },
+  { "id": "diet-018", "date": "2026-05-09", "meal_type": "ceia", "description": "Chá de erva-doce", "calories": 5 }
+]
