@@ -58,17 +58,6 @@ export default function LandingPage() {
             Omni Vital
           </Link>
 
-          <nav
-            className={`hidden min-w-0 items-center gap-3 overflow-x-auto text-sm sm:flex md:gap-6 ${isDark ? 'text-slate-300' : 'text-slate-500'}`}
-          >
-            <a href="#" className="shrink-0 hover:text-[#FFE14D]">Início</a>
-            <a href="#solucao" className="shrink-0 hover:text-[#FFE14D]">Solução</a>
-            <a href="#jornada" className="shrink-0 hover:text-[#FFE14D]">Jornada</a>
-            <a href="#equipe" className="shrink-0 hover:text-[#FFE14D]">Equipe multiprofissional</a>
-            <a href="#pitch" className="shrink-0 hover:text-[#FFE14D]">Pitch</a>
-            <a href="#sobre" className="shrink-0 hover:text-[#FFE14D]">Sobre o projeto</a>
-          </nav>
-
           <button
             type="button"
             className={`inline-flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-lg transition sm:h-9 sm:w-9 ${isDark ? 'text-zinc-300 hover:bg-zinc-800' : 'text-slate-600 hover:bg-[#fff4c4]'}`}
