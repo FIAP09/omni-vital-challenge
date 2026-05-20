@@ -7,7 +7,6 @@ import {
   Calendar,
   ChevronLeft,
   ChevronRight,
-  ClipboardList,
   Users,
 } from 'lucide-react'
 import ExpandableDetailRow from '@/components/journey/ExpandableDetailRow'
@@ -722,12 +721,7 @@ export default function DashboardPage() {
                     </p>
                     <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                       Acompanhe pacientes em pré e pós-operatório, cirurgias agendadas,
-                      alertas de reganho de peso e exames pendentes. Jornadas e metas dos pacientes
-                      ficam em{' '}
-                      <span className="font-medium text-[#0f2743] dark:text-[#FFE14D]/90">
-                        Avaliações da jornada
-                      </span>{' '}
-                      quando disponível ao seu perfil.
+                      alertas de reganho de peso e exames pendentes.
                     </p>
                   </div>
                   {summary && (
@@ -797,7 +791,7 @@ export default function DashboardPage() {
               <div className="flex flex-wrap gap-2">
                 {canModule('pacientes') && (
                   <Link
-                    to="/app/patients"
+                    to="/app/patients/1"
                     className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
                   >
                     <Users className="h-4 w-4 shrink-0 opacity-70" strokeWidth={2} />
@@ -822,16 +816,6 @@ export default function DashboardPage() {
                   >
                     <BookOpen className="h-4 w-4 shrink-0 opacity-70" strokeWidth={2} />
                     Orientações
-                    <ArrowRight className="h-4 w-4 opacity-70" />
-                  </Link>
-                )}
-                {canModule('pacientes') && (
-                  <Link
-                    to="/app/journey-evaluations"
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#c8a800]/40 bg-[#fffdf5] px-3 py-2 text-sm font-medium text-[#0f2743] transition hover:bg-[#fff4c4] dark:border-[#FFE14D]/35 dark:bg-[#152754]/90 dark:text-[#FFE14D] dark:hover:bg-[#1a3158]"
-                  >
-                    <ClipboardList className="h-4 w-4 shrink-0" strokeWidth={2} />
-                    Avaliações da jornada
                     <ArrowRight className="h-4 w-4 opacity-70" />
                   </Link>
                 )}

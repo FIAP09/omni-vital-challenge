@@ -334,12 +334,6 @@ export default function LandingPage() {
             <p className={`mt-2 text-sm ${isDark ? 'text-zinc-400' : 'text-slate-500'}`}>Plataforma para a jornada completa do paciente bariátrico.</p>
           </div>
           <div>
-            <p className={`text-sm font-semibold ${isDark ? 'text-zinc-200' : 'text-slate-700'}`}>Navegue</p>
-            <div className={`mt-2 space-y-1 text-sm ${isDark ? 'text-zinc-400' : 'text-slate-500'}`}>
-              <p>Início</p><p>Solução</p><p>Jornada</p><p>Sobre</p>
-            </div>
-          </div>
-          <div>
             <p className={`text-sm font-semibold ${isDark ? 'text-zinc-200' : 'text-slate-700'}`}>Diferenciais</p>
             <div className={`mt-2 space-y-1 text-sm ${isDark ? 'text-zinc-400' : 'text-slate-500'}`}>
               <p>Timeline de exames por especialidade</p><p>Controle de peso e reganho</p><p>Acompanhamento completo pós-operatório</p>
