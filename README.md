@@ -21,7 +21,7 @@ Hoje, exames, laudos, orientações e dados de acompanhamento ficam espalhados e
 
 A Omni Vital resolve esse problema reunindo tudo em um único ambiente: **exames organizados por especialidade, controle de peso, dieta, sono, atividade física, resultados laboratoriais e documentos de orientação**. A plataforma conecta paciente, acompanhante e equipe médica, oferecendo uma visão mais clara, segura e completa do cuidado bariátrico.
 
-[![IMAGEM](https://i.postimg.cc/RFkxwxCb/preview-3.png)](https://vaggou.vercel.app)
+[![IMAGEM](https://i.postimg.cc/RFkxwxCb/preview-3.png)](https://omni-vital-challenge.vercel.app/)
 
 ## Sumário
 
@@ -51,29 +51,33 @@ Além disso, o projeto busca entregar uma interface acessível em desktops e dis
 
 ✔ Acesso de pacientes, acompanhantes e médicos
 
-[![IMAGEM](https://i.postimg.cc/Bbb4BB2M/preview-2.png)](https://vaggou.vercel.app)
+[![IMAGEM](https://i.postimg.cc/Bbb4BB2M/preview-2.png)](https://omni-vital-challenge.vercel.app/)
 
 ✔ Acesso do paciente com visualização centralizada da jornada bariátrica  
 
-[![IMAGEM](https://i.postimg.cc/DyzRmzcx/preview-8.png)](https://vaggou.vercel.app)
+[![IMAGEM](https://i.postimg.cc/DyzRmzcx/preview-8.png)](https://omni-vital-challenge.vercel.app/)
 
 ✔ Painel do paciente com acompanhamento de consultas, exames, laudos, peso, dieta, hidratação e atividades físicas  
 
-[![IMAGEM](https://i.postimg.cc/yxKBwzqt/preview-6.png)](https://vaggou.vercel.app)
+[![IMAGEM](https://i.postimg.cc/yxKBwzqt/preview-6.png)](https://omni-vital-challenge.vercel.app/)
 
 ✔ Acompanhamento de hábitos importantes no pós-operatório, como alimentação, ingestão de água, sono e rotina de exercícios 
 
-[![IMAGEM](https://i.postimg.cc/ncRb1mLW/preview7.png)](https://vaggou.vercel.app)
+[![IMAGEM](https://i.postimg.cc/ncRb1mLW/preview7.png)](https://omni-vital-challenge.vercel.app/)
 
 ✔ Acesso de acompanhantes para auxiliar pacientes que precisam de apoio próximo, como idosos ou pessoas em acompanhamento familiar  
 
 ✔ Painel do acompanhante com visualização dos principais dados, alertas e status do paciente acompanhado  
 
-[![IMAGEM](https://i.postimg.cc/V6YDT7Gr/preview-9.png)](https://vaggou.vercel.app)
+[![IMAGEM](https://i.postimg.cc/V6YDT7Gr/preview-9.png)](https://omni-vital-challenge.vercel.app/)
 
-✔ Acesso da equipe médica para acompanhar pacientes, exames, laudos e informações clínicas relevantes  
+✔ Acesso da equipe médica para acompanhar pacientes em cada etapa do processo bariátrico
+
+[![IMAGEM](https://i.postimg.cc/jSSfGptd/preview-10.png)](https://omni-vital-challenge.vercel.app/)
 
 ✔ Sistema de alertas e notificações para apoiar o monitoramento e a prevenção de complicações  
+
+[![IMAGEM](https://i.postimg.cc/d3QQhKWD/preview-11.png)](https://omni-vital-challenge.vercel.app/)
 
 ✔ Interface responsiva para uso em desktop e dispositivos móveis  
 
