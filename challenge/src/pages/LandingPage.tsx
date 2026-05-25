@@ -228,7 +228,7 @@ export default function LandingPage() {
             {/* TODO: Substituir VIDEO_ID pelo ID real do YouTube */}
             <iframe
               className="h-full w-full"
-              src="https://www.youtube.com/embed/VIDEO_ID"
+              src="https://www.youtube.com/embed/z7Dns1ULwzc"
               title="Video Pitch — Omni Vital"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
