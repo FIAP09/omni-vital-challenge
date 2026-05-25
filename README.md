@@ -87,7 +87,8 @@ Além disso, o projeto busca entregar uma interface acessível em desktops e dis
 Acesse o protótipo hospedado: **https://omni-vital-challenge.vercel.app/**
 
 ## 🖥️ Tecnologias Utilizadas
-- React  
+- React
+- Vue
 - TypeScript  
 - Vite  
 - Tailwind CSS  
