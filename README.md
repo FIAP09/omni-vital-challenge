@@ -5,7 +5,7 @@
 </div>
 <br>
 <p align="center">
-  <a href="[https://vaggou.vercel.app](https://omni-vital-challenge.vercel.app/)" target="_blank" rel="noopener noreferrer">
+  <a href="[https://omni-vital-challenge.vercel.app/](https://omni-vital-challenge.vercel.app/)" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/website-%234560FF?style=flat-square&logo=google-chrome&logoColor=FFFFFF" alt="Site" />
   </a>
 </p>
@@ -80,7 +80,7 @@ Além disso, o projeto busca entregar uma interface acessível em desktops e dis
 ✔ Protótipo funcional publicado em ambiente web
 
 ## 🔗 Deploy
-Acesse o protótipo hospedado: **https://vaggou.vercel.app**
+Acesse o protótipo hospedado: **https://omni-vital-challenge.vercel.app/**
 
 ## 🖥️ Tecnologias Utilizadas
 - React  
