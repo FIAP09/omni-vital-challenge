@@ -5,7 +5,7 @@
 </div>
 <br>
 <p align="center">
-  <a href="[https://omni-vital-challenge.vercel.app/](https://omni-vital-challenge.vercel.app/)" target="_blank" rel="noopener noreferrer">
+  <a href="https://omni-vital-challenge.vercel.app/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/website-%234560FF?style=flat-square&logo=google-chrome&logoColor=FFFFFF" alt="Site" />
   </a>
 </p>
