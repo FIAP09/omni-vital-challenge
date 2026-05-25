@@ -1,73 +1,146 @@
-# React + TypeScript + Vite
+<div align="center">
+  <a href="https://omni-vital-challenge.vercel.app/">
+    <img src="https://i.postimg.cc/tTL2BXxd/omni-vital.png" alt="Vaggou Logo" width="80px"/>
+  </a>
+</div>
+<br>
+<p align="center">
+  <a href="[https://vaggou.vercel.app](https://omni-vital-challenge.vercel.app/)" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/website-%234560FF?style=flat-square&logo=google-chrome&logoColor=FFFFFF" alt="Site" />
+  </a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> [!NOTE]
+> Este projeto foi desenvolvido como parte da Challenge 2026 do 1º ano de Engenharia de Software da [FIAP](https://www.fiap.com.br/), em parceria com a empresa [THM Estatística](https://thmestatistica.com/).
 
-Currently, two official plugins are available:
+# [Omni Vital](https://omni-vital-challenge.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O **Omni Vital** é uma plataforma de saúde digital criada para **centralizar toda a jornada do paciente bariátrico**, desde o pré-operatório até o acompanhamento após a cirurgia.
 
-## React Compiler
+Hoje, exames, laudos, orientações e dados de acompanhamento ficam espalhados entre médicos, especialistas, PDFs, anotações e consultas espaçadas. Isso torna o processo confuso para o paciente e dificulta que a equipe médica acompanhe sinais importantes, como reganho de peso, alterações laboratoriais e possíveis complicações.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A Omni Vital resolve esse problema reunindo tudo em um único ambiente: **exames organizados por especialidade, controle de peso, dieta, sono, atividade física, resultados laboratoriais e documentos de orientação**. A plataforma conecta paciente, acompanhante e equipe médica, oferecendo uma visão mais clara, segura e completa do cuidado bariátrico.
 
-## Expanding the ESLint configuration
+[![IMAGEM](https://i.postimg.cc/RFkxwxCb/preview-3.png)](https://vaggou.vercel.app)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Sumário
+
+- [🎯 Objetivo do Projeto](#-objetivo-do-projeto)
+- [🧩 Funcionalidades do MVP](#-funcionalidades-do-mvp)
+- [🔗 Deploy](#-deploy)
+- [🖥️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [📁 Estrutura do Projeto](#-estrutura-do-projeto)
+- [👥 Equipe](#-equipe)
+- [🎥 Vídeo Pitch](#-vídeo-pitch)
+- [👋 Finalização](#-finalização)
+
+
+## 🎯 Objetivo do Projeto
+
+Desenvolver uma **solução tecnológica inovadora**, em formato de **aplicação web responsiva**, voltada ao monitoramento e à prevenção de problemas de saúde na jornada do paciente bariátrico.
+
+O **Omni Vital** tem como objetivo centralizar, organizar e apresentar dados de saúde de forma **visual, clara e compreensível**, permitindo que pacientes, acompanhantes e profissionais da saúde acompanhem informações importantes do pré e pós-operatório, como exames, laudos, evolução de peso, dieta, sono, atividade física e resultados laboratoriais.
+
+A proposta do projeto está alinhada ao desafio ao escolher um problema real de saúde a ser analisado: a falta de acompanhamento estruturado e centralizado no cuidado bariátrico. Para isso, a aplicação utiliza dados organizados e interpretáveis para facilitar a visualização de padrões, apoiar a identificação de riscos e gerar alertas simples relacionados à evolução do paciente.
+
+Além disso, o projeto busca entregar uma interface acessível em desktops e dispositivos móveis, com foco na **lógica de programação**, na **visualização de dados** e na criação de recursos que auxiliem a tomada de decisão, como notificações, alertas e geração de laudos.
+
+## 🧩 Funcionalidades do MVP
+
+✔ Página inicial apresentando o problema, a proposta e o objetivo da solução  
+
+✔ Acesso de pacientes, acompanhantes e médicos
+
+[![IMAGEM](https://i.postimg.cc/Bbb4BB2M/preview-2.png)](https://vaggou.vercel.app)
+
+✔ Acesso do paciente com visualização centralizada da jornada bariátrica  
+
+[![IMAGEM](https://i.postimg.cc/DyzRmzcx/preview-8.png)](https://vaggou.vercel.app)
+
+✔ Painel do paciente com acompanhamento de consultas, exames, laudos, peso, dieta, hidratação e atividades físicas  
+
+[![IMAGEM](https://i.postimg.cc/yxKBwzqt/preview-6.png)](https://vaggou.vercel.app)
+
+✔ Acompanhamento de hábitos importantes no pós-operatório, como alimentação, ingestão de água, sono e rotina de exercícios 
+
+[![IMAGEM](https://i.postimg.cc/ncRb1mLW/preview7.png)](https://vaggou.vercel.app)
+
+✔ Acesso de acompanhantes para auxiliar pacientes que precisam de apoio próximo, como idosos ou pessoas em acompanhamento familiar  
+
+✔ Painel do acompanhante com visualização dos principais dados, alertas e status do paciente acompanhado  
+
+[![IMAGEM](https://i.postimg.cc/V6YDT7Gr/preview-9.png)](https://vaggou.vercel.app)
+
+✔ Acesso da equipe médica para acompanhar pacientes, exames, laudos e informações clínicas relevantes  
+
+✔ Sistema de alertas e notificações para apoiar o monitoramento e a prevenção de complicações  
+
+✔ Interface responsiva para uso em desktop e dispositivos móveis  
+
+✔ Protótipo funcional publicado em ambiente web
+
+## 🔗 Deploy
+Acesse o protótipo hospedado: **https://vaggou.vercel.app**
+
+## 🖥️ Tecnologias Utilizadas
+- React  
+- TypeScript  
+- Vite  
+- Tailwind CSS  
+- JavaScript  
+- Node.js
+
+## 📁 Estrutura do Projeto
 
 ```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+/public
+   favicon.ico
+   favicon.svg
+   icons.svg
+   /images
+   /mocks
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+/src
+   App.tsx
+   index.css
+   main.tsx
+   /assets
+   /components
+   /constants
+   /hooks
+   /layouts
+   /lib
+   /pages
+   /services
+   /stores
+   /types
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+index.html
+package.json
+package-lock.json
+vite.config.ts
+tsconfig.json
+tsconfig.app.json
+tsconfig.node.json
+postcss.config.js
+eslint.config.js
+README.md
+.gitignore
+/challenge
+/old
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 👥 Equipe
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Nome | RM |
+|------|-----|
+| Hugo Linhares | 567011 |
+| Matheus Audibert | 568080 |
+| Ramon da Silva Martins | 566929 |
+| Thiago Saccomani | 566731 |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎥 Vídeo Pitch
+
+Vídeo Pitch demonstrando e explicando a solução: 
+
+[![YouTube Card](https://youtube-cards.audibert.dev/api/z7Dns1ULwzc?width=250&theme=github&max_title_lines=1&show_duration=false)](https://youtube.com/watch?v=z7Dns1ULwzc)
