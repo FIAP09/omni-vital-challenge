@@ -98,41 +98,40 @@ Acesse o protótipo hospedado: **https://omni-vital-challenge.vercel.app/**
 ## 📁 Estrutura do Projeto
 
 ```js
-/public
-   favicon.ico
-   favicon.svg
-   icons.svg
-   /images
-   /mocks
-
-/src
-   App.tsx
-   index.css
-   main.tsx
-   /assets
-   /components
-   /constants
-   /hooks
-   /layouts
-   /lib
-   /pages
-   /services
-   /stores
-   /types
-
-index.html
-package.json
-package-lock.json
-vite.config.ts
-tsconfig.json
-tsconfig.app.json
-tsconfig.node.json
-postcss.config.js
-eslint.config.js
-README.md
-.gitignore
 /challenge
-/old
+   /public
+      favicon.ico
+      favicon.svg
+      icons.svg
+      /images
+      /mocks
+
+   /src
+      App.tsx
+      index.css
+      main.tsx
+      /assets
+      /components
+      /constants
+      /hooks
+      /layouts
+      /lib
+      /pages
+      /services
+      /stores
+      /types
+
+   index.html
+   package.json
+   package-lock.json
+   vite.config.ts
+   tsconfig.json
+   tsconfig.app.json
+   tsconfig.node.json
+   postcss.config.js
+   eslint.config.js
+   README.md
+   .gitignore
 ```
 
 ## 👥 Equipe
