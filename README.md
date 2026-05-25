@@ -144,3 +144,9 @@ README.md
 Vídeo Pitch demonstrando e explicando a solução: 
 
 [![YouTube Card](https://youtube-cards.audibert.dev/api/z7Dns1ULwzc?width=250&theme=github&max_title_lines=1&show_duration=false)](https://youtube.com/watch?v=z7Dns1ULwzc)
+
+## 👋 Finalização
+
+O **Omni Vital** é nosso primeiro passo para tornar a jornada do paciente bariátrico mais organizada, segura e acessível.
+
+_❤️ Obrigado por conhecer nossa solução!_
