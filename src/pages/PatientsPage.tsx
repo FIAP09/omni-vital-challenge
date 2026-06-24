@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useViewAs } from '@/hooks/useViewAs'
 import { patientsService } from '@/services/patients.service'
@@ -9,6 +9,30 @@ type Companion = {
   patientId: number
   name: string
   email: string
+}
+
+type ExtractedRecord = {
+  name: string
+  email: string
+  birth_date: string
+  weight: number
+  height: number
+  bmi: number
+  comorbidities: string[]
+  insurance: string
+  registry: string
+}
+
+const MOCK_EXTRACTED_RECORD: ExtractedRecord = {
+  name: 'Maria Aparecida Santos',
+  email: 'maria.santos@hospital.local',
+  birth_date: '1979-03-14',
+  weight: 118.4,
+  height: 1.62,
+  bmi: 45.1,
+  comorbidities: ['Hipertensão', 'Diabetes tipo 2', 'Apneia do sono'],
+  insurance: 'Unimed Nacional · Plano Bariátrico',
+  registry: 'PRT-2026-44721',
 }
 
 const COMPANIONS_STORAGE_KEY = 'omni-vital-demo-companions'
@@ -52,6 +76,12 @@ export default function PatientsPage() {
     email: '',
     linkedPatientId: null as number | null,
   })
+
+  const recordFileInputRef = useRef<HTMLInputElement | null>(null)
+  const [recordPreview, setRecordPreview] = useState<string | null>(null)
+  const [recordFileName, setRecordFileName] = useState<string | null>(null)
+  const [recordStatus, setRecordStatus] = useState<'idle' | 'reading' | 'done'>('idle')
+  const [extractedRecord, setExtractedRecord] = useState<ExtractedRecord | null>(null)
 
   const [newCompanionForPatientForm, setNewCompanionForPatientForm] = useState({
     name: '',
@@ -104,6 +134,44 @@ export default function PatientsPage() {
     persistCompanions(updated)
   }
 
+  const openRecordPicker = () => {
+    recordFileInputRef.current?.click()
+  }
+
+  const resetRecordImport = () => {
+    setRecordPreview(null)
+    setRecordFileName(null)
+    setRecordStatus('idle')
+    setExtractedRecord(null)
+    if (recordFileInputRef.current) recordFileInputRef.current.value = ''
+  }
+
+  const onRecordFileChosen = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]
+    if (!file) return
+    setRecordFileName(file.name)
+    setRecordStatus('reading')
+    setExtractedRecord(null)
+
+    const reader = new FileReader()
+    reader.onload = () => {
+      setRecordPreview(typeof reader.result === 'string' ? reader.result : null)
+    }
+    reader.readAsDataURL(file)
+
+    // Simulated OCR / extraction
+    window.setTimeout(() => {
+      setExtractedRecord(MOCK_EXTRACTED_RECORD)
+      setAddForm((prev) => ({
+        ...prev,
+        profile: 'paciente',
+        name: MOCK_EXTRACTED_RECORD.name,
+        email: MOCK_EXTRACTED_RECORD.email,
+      }))
+      setRecordStatus('done')
+    }, 1800)
+  }
+
   const submitAdd = () => {
     if (!addForm.name || !addForm.email) {
       alert('Preencha nome e e-mail para enviar o convite.')
@@ -111,21 +179,23 @@ export default function PatientsPage() {
     }
 
     if (addForm.profile === 'paciente') {
+      const fromRecord = extractedRecord
       setPatients((prev) => [
         {
           id: Date.now(),
           name: addForm.name,
-          birth_date: new Date().toISOString().slice(0, 10),
-          weight: 0,
-          height: 0,
-          bmi: 0,
+          birth_date: fromRecord?.birth_date ?? new Date().toISOString().slice(0, 10),
+          weight: fromRecord?.weight ?? 0,
+          height: fromRecord?.height ?? 0,
+          bmi: fromRecord?.bmi ?? 0,
           risk_level: 'baixo',
           status: 'REQUESTED',
-          initial_weight: 0,
+          initial_weight: fromRecord?.weight ?? 0,
           target_weight: 0,
         },
         ...prev,
       ])
+      resetRecordImport()
     } else {
       if (addForm.linkedPatientId == null) {
         alert('Selecione o paciente ao qual este acompanhante sera vinculado.')
@@ -321,6 +391,187 @@ export default function PatientsPage() {
 
       {/* Add tab */}
       {activeTab === 'add' && isMedicalTeam && (
+        <>
+        {addForm.profile === 'paciente' && (
+        <div className="rounded-xl border border-[#c8a800]/35 bg-[#fffdf5] p-6 dark:border-[#FFE14D]/25 dark:bg-[#152754]/60">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9e8500] dark:text-[#FFE14D]/90">
+                Atalho de cadastro
+              </p>
+              <h3 className="mt-1 text-base font-semibold text-slate-700 dark:text-slate-100">
+                Importar prontuário do hospital
+              </h3>
+              <p className="mt-1 max-w-xl text-sm text-slate-500 dark:text-slate-400">
+                Anexe um print da ficha do paciente no sistema interno do hospital. Vamos
+                ler as informações automaticamente e preencher o cadastro — você só
+                revisa e envia o convite.
+              </p>
+            </div>
+            {recordStatus !== 'idle' && (
+              <button
+                type="button"
+                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-semibold text-slate-600 hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
+                onClick={resetRecordImport}
+              >
+                Trocar imagem
+              </button>
+            )}
+          </div>
+
+          <input
+            ref={recordFileInputRef}
+            type="file"
+            accept="image/*"
+            className="hidden"
+            onChange={onRecordFileChosen}
+          />
+
+          {recordStatus === 'idle' && (
+            <button
+              type="button"
+              onClick={openRecordPicker}
+              className="mt-4 flex w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-[#c8a800]/45 bg-white/70 px-4 py-8 text-center transition hover:border-[#c8a800] hover:bg-white dark:border-[#FFE14D]/30 dark:bg-[#0f1834]/60 dark:hover:border-[#FFE14D]/60"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                strokeWidth={1.6}
+                stroke="currentColor"
+                className="h-9 w-9 text-[#9e8500] dark:text-[#FFE14D]"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 16.5V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18v-1.5M16.5 7.5 12 3m0 0L7.5 7.5M12 3v13.5"
+                />
+              </svg>
+              <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">
+                Clique para anexar o print do prontuário
+              </p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                PNG ou JPG — aceitamos qualquer captura de tela do sistema do hospital
+              </p>
+            </button>
+          )}
+
+          {recordStatus !== 'idle' && (
+            <div className="mt-4 grid gap-4 md:grid-cols-[1fr_1.2fr]">
+              <div className="rounded-xl border border-slate-200 bg-white p-2 dark:border-slate-700 dark:bg-slate-900">
+                {recordPreview ? (
+                  <img
+                    src={recordPreview}
+                    alt="Pré-visualização do prontuário enviado"
+                    className="h-48 w-full rounded-lg object-cover"
+                  />
+                ) : (
+                  <div className="flex h-48 items-center justify-center text-xs text-slate-400">
+                    Gerando pré-visualização...
+                  </div>
+                )}
+                <p className="mt-2 truncate px-1 text-xs text-slate-500 dark:text-slate-400">
+                  {recordFileName ?? 'prontuario.png'}
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+                {recordStatus === 'reading' && (
+                  <div className="flex h-full flex-col items-start justify-center gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#FFE14D] border-t-transparent" />
+                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-100">
+                        Lendo prontuário...
+                      </p>
+                    </div>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      Identificando nome, dados antropométricos, comorbidades e contato.
+                    </p>
+                    <div className="mt-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+                      <div className="h-1.5 w-2/3 animate-pulse rounded-full bg-[#FFE14D]" />
+                    </div>
+                  </div>
+                )}
+
+                {recordStatus === 'done' && extractedRecord && (
+                  <div>
+                    <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="h-4 w-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m4.5 12.75 6 6 9-13.5"
+                        />
+                      </svg>
+                      <p className="text-sm font-semibold">Dados extraídos automaticamente</p>
+                    </div>
+                    <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs">
+                      <div>
+                        <dt className="text-slate-500 dark:text-slate-400">Nome</dt>
+                        <dd className="font-medium text-slate-700 dark:text-slate-100">
+                          {extractedRecord.name}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-slate-500 dark:text-slate-400">Nº prontuário</dt>
+                        <dd className="font-medium text-slate-700 dark:text-slate-100">
+                          {extractedRecord.registry}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-slate-500 dark:text-slate-400">Nascimento</dt>
+                        <dd className="font-medium text-slate-700 dark:text-slate-100">
+                          {new Date(extractedRecord.birth_date).toLocaleDateString('pt-BR')}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-slate-500 dark:text-slate-400">Convênio</dt>
+                        <dd className="font-medium text-slate-700 dark:text-slate-100">
+                          {extractedRecord.insurance}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-slate-500 dark:text-slate-400">Peso / Altura</dt>
+                        <dd className="font-medium text-slate-700 dark:text-slate-100">
+                          {extractedRecord.weight} kg · {extractedRecord.height} m
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="text-slate-500 dark:text-slate-400">IMC</dt>
+                        <dd className="font-medium text-slate-700 dark:text-slate-100">
+                          {extractedRecord.bmi}
+                        </dd>
+                      </div>
+                      <div className="col-span-2">
+                        <dt className="text-slate-500 dark:text-slate-400">Comorbidades</dt>
+                        <dd className="mt-1 flex flex-wrap gap-1">
+                          {extractedRecord.comorbidities.map((c) => (
+                            <span
+                              key={c}
+                              className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300"
+                            >
+                              {c}
+                            </span>
+                          ))}
+                        </dd>
+                      </div>
+                    </dl>
+                    <p className="mt-3 text-[11px] text-slate-500 dark:text-slate-400">
+                      Os campos abaixo já estão preenchidos. Revise e envie o convite.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+        )}
+
         <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
           <h3 className="mb-4 text-base font-semibold text-slate-700 dark:text-slate-100">
             Cadastrar e enviar link de acesso
@@ -419,6 +670,7 @@ export default function PatientsPage() {
             Enviar convite de senha
           </button>
         </div>
+        </>
       )}
 
       {/* Edit tab */}

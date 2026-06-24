@@ -225,10 +225,9 @@ export default function LandingPage() {
             Apresentação do projeto Omni Vital — Challenge FIAP &amp; THM Estatística 2025-26.
           </p>
           <div className="mt-5 aspect-video w-full overflow-hidden rounded-xl">
-            {/* TODO: Substituir VIDEO_ID pelo ID real do YouTube */}
             <iframe
               className="h-full w-full"
-              src="https://www.youtube.com/embed/VIDEO_ID"
+              src="https://www.youtube.com/embed/z7Dns1ULwzc"
               title="Video Pitch — Omni Vital"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
